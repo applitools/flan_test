@@ -1,0 +1,16 @@
+services:
+  - docker
+  
+script:
+- git clone https://github.com/cloudflare/flan.git
+- cat ./flan/shared/ips.txt
+- cp ips.txt flan/shared/ips.txt
+- cat ./flan/shared/ips.txt
+- ls
+- cd flan
+- docker --version
+- make build
+- (make start >> start.out ; touch end.end) &
+- cp ../waitEnd.sh waitEnd.sh
+- chmod +x waitEnd.sh
+- ./waitEnd.sh
