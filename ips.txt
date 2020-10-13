@@ -1,0 +1,4 @@
+render-wus.applitools.com
+eyes.applitools.com
+eyesapi.applitools.com
+eyespublicwusi0.blob.core.windows.net
