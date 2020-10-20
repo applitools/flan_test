@@ -12,6 +12,8 @@ script:
 - make build
 - make start
 - make html
+- cd shared/reports
+- ls
 #- (make start >> start.out ; touch end.end) &
 #- cp ../waitEnd.sh waitEnd.sh
 #- chmod +x waitEnd.sh
