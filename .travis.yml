@@ -11,8 +11,8 @@ script:
 - docker --version
 - make build
 - DATE=$(date +"%Y.%m.%d-%H.%M")
-- ls -l /shared/xml_files
 - sudo mkdir -p /shared/xml_files/$DATE
+- ls -l /shared/xml_files
 - sudo make start
 - make html
 - cd shared/reports
