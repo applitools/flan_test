@@ -10,10 +10,8 @@ script:
 - cd flan
 - docker --version
 - make build
-- sudo mkdir -p /shared/xml_files
-- ls -l /shared
-- sudo chmod +rwx /shared/xml_files
-- ls -l /shared
+- DATE=$(date +"%Y.%m.%d-%H.%M")
+- sudo mkdir -p /shared/xml_files/$DATE
 - sudo make start
 - make html
 - cd shared/reports
