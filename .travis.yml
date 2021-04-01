@@ -12,7 +12,10 @@ script:
 - make build
 - DATE=$(date +"%Y.%m.%d-%H.%M")
 - sudo mkdir -p /shared/xml_files/$DATE
-- ls -l /shared/xml_files
+- touch /shared/xml_files/$DATE/render-wus.applitools.com.xml
+- touch /shared/xml_files/$DATE/eyes.applitools.com.xml
+- touch /shared/xml_files/$DATE/eyesapi.applitools.com.xml
+- touch /shared/xml_files/$DATE/eyespublicwusi0.blob.core.windows.net.xml
 - sudo make start
 - make html
 - cd shared/reports
