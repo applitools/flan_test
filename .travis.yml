@@ -11,10 +11,9 @@ script:
 - docker --version
 - make build
 - sudo mkdir -p /shared/xml_files
-- ls -l /
-- sudo chmod -rwx /shared
+- ls -l /shared
 - sudo chmod -rwx /shared/xml_files
-- ls -l /
+- ls -l /shared
 - sudo make start
 - make html
 - cd shared/reports
