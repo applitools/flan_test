@@ -10,6 +10,7 @@ script:
 - cd flan
 - docker --version
 - make build
+- mkdir -p /shared/xml_files
 - sudo make start
 - make html
 - cd shared/reports
