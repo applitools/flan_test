@@ -12,7 +12,7 @@ script:
 - make build
 - sudo mkdir -p /shared/xml_files
 - ls -l /shared
-- sudo chmod -rwx /shared/xml_files
+- sudo chmod +rwx /shared/xml_files
 - ls -l /shared
 - sudo make start
 - make html
