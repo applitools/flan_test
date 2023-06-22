@@ -22,6 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - run: echo ${{ secrets.PREFLIGHT_CLIENT_ID }}
       - run: |
           npm i -g preflight-cli      
           preflight run_test --clientId=${{ secrets.PREFLIGHT_CLIENT_ID }} --clientSecret=${{ secrets.PREFLIGHT_SECRET }} --testId="Pi535A2uHR8G" --environmentId="jlmjNF4suDdm" --browsers="win-chrome" --sizes="1440x900"
