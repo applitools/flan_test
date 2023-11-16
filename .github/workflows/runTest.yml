@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - run: |
           chmod +x runFlan
-          ./runFlan
+          sudo ./runFlan
 #       - uses: actions/checkout@v2
 #       - name: Use Node.js
 #         uses: actions/setup-node@v1
