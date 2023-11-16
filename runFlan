@@ -3,7 +3,7 @@
 open -a Docker
 rm -r flan/
 git clone https://github.com/cloudflare/flan.git
-az network dns record-set list -z applitools.com -g ApplitoolsManagement --subscription "Applitools Eyes" > urls.json
+# az network dns record-set list -z applitools.com -g ApplitoolsManagement --subscription "Applitools Eyes" > urls.json
 ./print_CNAME_or_A_entries.sh urls.json > ips.txt
 ./remove_black_list.sh
 cat ./flan/shared/ips.txt
