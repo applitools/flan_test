@@ -15,3 +15,4 @@ make build
 make html
 cd shared/reports
 ls
+cat $(ls)
