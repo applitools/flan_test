@@ -12,7 +12,6 @@ cat ./flan/shared/ips.txt
 cd flan
 docker --version
 make build
-make start
 make html
 cd shared/reports
 ls
