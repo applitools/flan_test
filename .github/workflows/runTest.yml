@@ -14,6 +14,7 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}  
+          allow-no-subscriptions: true
       - run: |
           chmod +x runFlan
           chmod +x print_CNAME_or_A_entries.sh
