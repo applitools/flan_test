@@ -21,6 +21,7 @@ jobs:
           chmod +x runFlan
           chmod +x print_CNAME_or_A_entries.sh
           chmod +x remove_black_list.sh
+          az network dns record-set list -z applitools.com -g ApplitoolsManagement --subscription "Applitools Eyes" > urls.json
           sudo ./runFlan
 #       - uses: actions/checkout@v2
 #       - name: Use Node.js
