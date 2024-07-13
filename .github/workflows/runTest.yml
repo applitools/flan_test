@@ -14,14 +14,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Azure login
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}  
+      - run: |
+          az network dns record-set list -z applitools.com -g ApplitoolsManagement --subscription "Applitools Eyes" > urls.json
+          cat urls.json
       - run: |
           chmod +x runFlan
           chmod +x print_CNAME_or_A_entries.sh
           chmod +x remove_black_list.sh
-          az network dns record-set list -z applitools.com -g ApplitoolsManagement --subscription "Applitools Eyes" > urls.json
           sudo ./runFlan
 #       - uses: actions/checkout@v2
 #       - name: Use Node.js
